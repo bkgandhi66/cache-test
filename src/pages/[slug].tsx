@@ -25,7 +25,7 @@ export async function getStaticPaths() {
     params: { slug: post.id },
   }));
 
-  return { paths, fallback: 'blocking' }; // `fallback: true` allows statically generated fallback pages
+  return { paths, fallback: true }; // `fallback: true` allows statically generated fallback pages
 }
 
 export async function getStaticProps({ params }:any) {
